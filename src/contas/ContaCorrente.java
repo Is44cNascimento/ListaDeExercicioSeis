@@ -1,9 +1,12 @@
+package contas;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class ContaCorrente extends ContaBancaria{
+public class ContaCorrente extends ContaBancaria {
 
     private ArrayList<ContaCorrente> contasCorrentes = new ArrayList<ContaCorrente>();
+
 
     public ContaCorrente(double saldo, String titular, String senha, String numeroDaConta) {
         super(saldo, titular, senha, numeroDaConta);
@@ -106,5 +109,7 @@ public class ContaCorrente extends ContaBancaria{
 
         }
     }
+
+
 
 }

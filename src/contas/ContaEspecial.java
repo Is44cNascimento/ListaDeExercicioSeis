@@ -1,9 +1,15 @@
+package contas;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class ContaEspecial extends ContaBancaria {
+public class ContaEspecial extends ContaBancaria implements Tributavel {
+
 
     private ArrayList<ContaEspecial> contasEspecias = new ArrayList<ContaEspecial>();
+
+
+
 
     public ContaEspecial(double saldo, String titular, String senha, String numeroDaConta) {
         super(saldo, titular, senha, numeroDaConta);
@@ -99,4 +105,11 @@ public class ContaEspecial extends ContaBancaria {
         }
     }
 
+    @Override
+    public double caculaTributavel(double saldo) {
+        saldo = getSaldo();
+        double cal =(saldo * 0.01);
+        return cal;
+
+    }
 }
