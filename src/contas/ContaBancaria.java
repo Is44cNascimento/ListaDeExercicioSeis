@@ -1,3 +1,5 @@
+package contas;
+
 public abstract class ContaBancaria {
 
     private double saldo;
